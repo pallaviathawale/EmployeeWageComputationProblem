@@ -1,18 +1,9 @@
 echo "Welcome to Employee Wage Computation Program"
-isPresent=$((RANDOM%3));
-perHourSalary=20;
-workingHour=0;
-if [ $isPresent -eq 0 ]
-then
-	echo "Employee is absent";
-	workingHour=0;
-elif [ $isPresent -eq 1 ]
-then
-	echo "Employee is present";
-	workingHour=8;
+echo "Enter the name of the employee: "
+read name
+random=$((RANDOM % 100))
+if [ $random -le 50 ]; then
+  echo "$name is present."
 else
-	echo "Employee is working as part time";
-	workingHour=4;
+  echo "$name is absent."
 fi
-salary=$(($perHourSalary * $workingHour));
-echo "Employee has earned $salary $ today";
