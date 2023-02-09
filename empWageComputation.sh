@@ -4,7 +4,7 @@ do
 	ext=`echo $files | awk -F. '{print $2}'`;
 	case $ext in
 		txt)
-			echo "$files is text file";
+			echo "$files is .text file";
 		;;
 
 		java)
